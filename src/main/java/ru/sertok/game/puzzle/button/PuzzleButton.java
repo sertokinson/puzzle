@@ -1,13 +1,12 @@
 package ru.sertok.game.puzzle.button;
 
-import lombok.Data;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-@Data
+
 public class PuzzleButton extends JButton {
     private boolean isLastButton;
 
@@ -30,5 +29,13 @@ public class PuzzleButton extends JButton {
                 setBorder(BorderFactory.createLineBorder(Color.gray));
             }
         });
+    }
+
+    public boolean isLastButton() {
+        return isLastButton;
+    }
+
+    public void setLastButton(boolean lastButton) {
+        isLastButton = lastButton;
     }
 }
